@@ -1,65 +1,120 @@
-import Image from "next/image";
+'use client';
+
+import { Hero } from '@/components/Hero';
+import { ProjectCard } from '@/components/ProjectCard';
+import { TheApproach } from '@/components/TheApproach';
+import { ContactForm } from '@/components/ContactForm';
+import { projects } from '@/data/projects';
+import { usePersonality } from '@/hooks/usePersonality';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 export default function Home() {
+  const { theme } = usePersonality();
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <>
+      {/* Hero Section */}
+      <Hero />
+
+      {/* Featured Projects Section */}
+      <section className="py-24 bg-white dark:bg-neutral-950">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: theme.animationSpeed }}
+            className="flex items-end justify-between mb-12"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            <div>
+              <div
+                className="inline-block px-4 py-1 rounded-full text-sm font-semibold mb-4"
+                style={{
+                  backgroundColor: `${theme.primaryColor}20`,
+                  color: theme.primaryColor,
+                }}
+              >
+                Featured Work
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 dark:text-white">
+                Selected Projects
+              </h2>
+            </div>
+            <Link
+              href="/projects"
+              className="hidden md:flex items-center gap-2 text-sm font-medium transition-colors"
+              style={{ color: theme.primaryColor }}
+            >
+              View All
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </Link>
+          </motion.div>
+
+          {/* Projects Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projects.map((project, index) => (
+              <ProjectCard key={project.id} project={project} index={index} />
+            ))}
+          </div>
+
+          {/* Mobile View All Link */}
+          <div className="mt-8 text-center md:hidden">
+            <Link
+              href="/projects"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-white transition-transform hover:scale-105"
+              style={{ backgroundColor: theme.primaryColor }}
+            >
+              View All Projects
+            </Link>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* The Approach Section */}
+      <TheApproach />
+
+      {/* Contact CTA Section */}
+      <section className="py-24 bg-white dark:bg-neutral-950">
+        <div className="max-w-3xl mx-auto px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: theme.animationSpeed }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 dark:text-white mb-6">
+              Let&apos;s Work Together
+            </h2>
+            <p className="text-xl text-neutral-600 dark:text-neutral-400">
+              Have a project in mind? I&apos;d love to hear about it.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: theme.animationSpeed, delay: 0.1 }}
+            className="bg-neutral-50 dark:bg-neutral-900 rounded-2xl p-8"
+          >
+            <ContactForm />
+          </motion.div>
+        </div>
+      </section>
+    </>
   );
 }
