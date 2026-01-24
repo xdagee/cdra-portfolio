@@ -64,7 +64,7 @@ export default function Home() {
           </motion.div>
 
           {/* Projects Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <ProjectCard key={project.id} project={project} index={index} />
             ))}
@@ -74,7 +74,7 @@ export default function Home() {
           <div className="mt-8 text-center md:hidden">
             <Link
               href="/projects"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-white transition-transform hover:scale-105"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-white transition-all hover:-translate-y-0.5 hover:shadow-lg"
               style={{ backgroundColor: theme.primaryColor }}
             >
               View All Projects

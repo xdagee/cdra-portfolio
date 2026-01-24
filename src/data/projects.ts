@@ -109,6 +109,31 @@ const ecosystem = [
     heroImage: '/images/projects/aiti-kace-hero.jpg',
     images: ['/images/projects/aiti-kace-1.jpg', '/images/projects/aiti-kace-2.jpg'],
   },
+  {
+    id: '5',
+    title: 'Identity Design Lab',
+    slug: 'identity-design-lab',
+    linkOverride: '/design-lab',
+    category: 'Brand Identity',
+    executiveSummary: 'Developed a comprehensive personal branding system based on the "Creative Directing Reformer" psychometric profile, exploring 3 distinct visual philosophies.',
+    outcomeMetrics: '3 Design concepts, Psychometric alignment, Interactive showcase',
+    techStack: ['SVG', 'React', 'Design Systems', 'Typography', 'Geometry'],
+    technicalChallenge: 'Translating abstract personality traits—Structure, Clarity, and Digital Architecture—into programmed visual systems using raw SVG and CSS.',
+    highlightSnippet: `// Concept 01: Structural Reformer
+<svg viewBox="0 0 100 100">
+  {/* The shared vertical stroke implies efficiency */}
+  <rect x="25" y="20" width="10" height="60" />
+  {/* Interlocking systems */}
+  <path d="M35 20 H55 A15 15 0 0 1 55 50..." />
+  {/* The Reformer's precise adjustment */}
+  <circle cx="85" cy="80" r="5" fill={theme.primary} />
+</svg>`,
+    problem: 'Needed a personal brand identity that accurately reflected the dual nature of an Executive (Results/Order) and Technical (Code/Systems) professional.',
+    process: 'Established a "Design Lab" to iterate on three core philosophies: The Structural Reformer (Order), Absolute Clarity (Precision), and The Digital Architect (Code). Each concept was programmed as a scalable vector system.',
+    result: 'Selected "Absolute Clarity" (Swiss Style) as the primary identity for its timeless confidence and unpretentious delivery, perfectly aligning with the "Steve Jobs" aesthetic.',
+    heroImage: '/images/projects/identity-hero.jpg',
+    images: [],
+  },
 ];
 
 export const getProjectBySlug = (slug: string): Project | undefined => {

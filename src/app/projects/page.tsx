@@ -50,7 +50,24 @@ export default function ProjectsPage() {
                 {/* Empty State (for when filtering returns no results) */}
                 {projects.length === 0 && (
                     <div className="text-center py-24">
-                        <p className="text-neutral-500">No projects found.</p>
+                        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-neutral-100 dark:bg-neutral-900 mb-6">
+                            <svg className="w-8 h-8 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                            </svg>
+                        </div>
+                        <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-2">
+                            No projects found
+                        </h3>
+                        <p className="text-neutral-500 max-w-md mx-auto mb-8">
+                            We couldn't find any projects matching your criteria. Try adjusting your filters or reach out to discuss a new collaboration.
+                        </p>
+                        <a
+                            href="/contact"
+                            className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-white transition-transform hover:scale-105"
+                            style={{ backgroundColor: theme.primaryColor }}
+                        >
+                            Start a Project
+                        </a>
                     </div>
                 )}
             </div>

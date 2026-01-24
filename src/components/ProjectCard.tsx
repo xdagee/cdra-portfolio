@@ -21,24 +21,21 @@ export const ProjectCard = ({ project, index = 0 }: ProjectCardProps) => {
             transition={{ duration: theme.animationSpeed, delay: index * 0.1 }}
             className="group relative"
         >
-            <Link href={`/projects/${project.slug}`}>
+            <Link href={project.linkOverride || `/projects/${project.slug}`}>
                 <div
                     className="relative overflow-hidden rounded-xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
-                    style={{ borderLeftWidth: '4px', borderLeftColor: theme.primaryColor }}
                 >
-                    {/* Category Badge */}
-                    <div className="absolute top-4 right-4 z-10">
+                    {/* Content */}
+                    <div className={`p-6 ${theme.layoutDensity === 'compact' ? 'space-y-3' : 'space-y-4'}`}>
+                        {/* Category Eyebrow */}
                         <span
-                            className="px-3 py-1 text-xs font-semibold text-white rounded-full"
-                            style={{ backgroundColor: theme.primaryColor }}
+                            className="text-xs font-semibold uppercase tracking-wider"
+                            style={{ color: theme.primaryColor }}
                         >
                             {project.category}
                         </span>
-                    </div>
 
-                    {/* Content */}
-                    <div className={`p-6 ${theme.layoutDensity === 'compact' ? 'space-y-3' : 'space-y-4'}`}>
-                        <h3 className="text-xl font-bold text-neutral-900 dark:text-white group-hover:text-inherit transition-colors">
+                        <h3 className="text-xl font-bold text-neutral-900 dark:text-white group-hover:text-inherit transition-colors heading-display">
                             {project.title}
                         </h3>
 

@@ -23,6 +23,7 @@ export interface Project {
   result: string;
   heroImage: string;
   images: string[];
+  linkOverride?: string;
 }
 
 export interface PersonalityState {

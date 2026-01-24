@@ -20,7 +20,7 @@ export const Hero = () => {
                 />
             </div>
 
-            <div className="max-w-7xl mx-auto px-6 lg:px-8 py-24 lg:py-32">
+            <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12 md:py-24 lg:py-32">
                 <div className="grid lg:grid-cols-12 gap-12 items-center">
                     {/* Content */}
                     <motion.div
@@ -34,12 +34,8 @@ export const Hero = () => {
                             initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: theme.animationSpeed }}
-                            className="flex items-center gap-2 mb-6"
+                            className="mb-6"
                         >
-                            <div
-                                className="w-12 h-0.5"
-                                style={{ backgroundColor: theme.primaryColor }}
-                            />
                             <span
                                 className="text-sm font-semibold tracking-wider uppercase"
                                 style={{ color: theme.primaryColor }}
@@ -49,7 +45,7 @@ export const Hero = () => {
                         </motion.div>
 
                         {/* Headline */}
-                        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-neutral-900 dark:text-white leading-tight mb-6">
+                        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-neutral-900 dark:text-white leading-tight mb-6 heading-display">
                             Prince Boateng
                             <br />
                             <span style={{ color: theme.primaryColor }}>Asare</span>
@@ -72,7 +68,7 @@ export const Hero = () => {
                         >
                             <Link
                                 href="/projects"
-                                className="inline-flex items-center gap-2 px-8 py-4 text-white font-semibold rounded-lg transition-all duration-200 hover:scale-105 hover:shadow-xl"
+                                className="inline-flex items-center gap-2 px-8 py-4 text-white font-semibold rounded-lg transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
                                 style={{ backgroundColor: theme.primaryColor }}
                             >
                                 View Projects
@@ -136,24 +132,7 @@ export const Hero = () => {
                     </motion.div>
                 </div>
 
-                {/* Scroll Indicator */}
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.8 }}
-                    className="absolute bottom-8 left-1/2 -translate-x-1/2"
-                >
-                    <motion.div
-                        animate={{ y: [0, 8, 0] }}
-                        transition={{ repeat: Infinity, duration: 1.5 }}
-                        className="w-6 h-10 rounded-full border-2 border-neutral-300 dark:border-neutral-700 flex justify-center pt-2"
-                    >
-                        <div
-                            className="w-1.5 h-1.5 rounded-full"
-                            style={{ backgroundColor: theme.primaryColor }}
-                        />
-                    </motion.div>
-                </motion.div>
+
             </div>
         </section>
     );

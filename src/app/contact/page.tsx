@@ -7,8 +7,8 @@ import { usePersonality } from '@/hooks/usePersonality';
 const contactInfo = [
     {
         label: 'Email',
-        value: 'princeboatengasare@gmail.com',
-        href: 'mailto:princeboatengasare@gmail.com',
+        value: 'maprincegee@gmail.com',
+        href: 'mailto:maprincegee@gmail.com',
     },
     {
         label: 'GitHub',
@@ -17,8 +17,8 @@ const contactInfo = [
     },
     {
         label: 'LinkedIn',
-        value: 'linkedin.com/in/princeboatengasare',
-        href: 'https://www.linkedin.com/in/princeboatengasare/',
+        value: 'linkedin.com/in/prince-boateng-asare',
+        href: 'https://www.linkedin.com/in/prince-boateng-asare',
     },
 ];
 

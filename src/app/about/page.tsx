@@ -149,37 +149,37 @@ export default function AboutPage() {
     const { theme, isExecutive, isTechnical } = usePersonality();
 
     return (
-        <div className="pt-24 pb-16">
+        <div className="pt-32 pb-24 min-h-screen bg-neutral-50 dark:bg-neutral-950">
             <div className="max-w-4xl mx-auto px-6 lg:px-8">
                 {/* Page Header */}
                 <motion.header
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: theme.animationSpeed }}
-                    className="mb-16"
+                    className="mb-24"
                 >
-                    <div className="flex items-center gap-2 mb-6">
+                    <div className="flex items-center gap-3 mb-8">
                         <div
-                            className="w-12 h-0.5"
+                            className="w-12 h-[2px]"
                             style={{ backgroundColor: theme.primaryColor }}
                         />
                         <span
-                            className="text-sm font-semibold tracking-wider uppercase"
+                            className="text-xs font-bold tracking-[0.2em] uppercase"
                             style={{ color: theme.primaryColor }}
                         >
                             Curriculum Vitae
                         </span>
                     </div>
-                    <h1 className="text-5xl md:text-6xl font-bold text-neutral-900 dark:text-white mb-4">
-                        Prince Boateng Asare
+                    <h1 className="text-6xl md:text-7xl font-bold text-neutral-900 dark:text-white mb-6 tracking-tighter">
+                        Prince Boateng Asare.
                     </h1>
-                    <p className="text-2xl font-medium mb-6" style={{ color: theme.primaryColor }}>
+                    <p className="text-2xl font-medium mb-8 tracking-tight" style={{ color: theme.primaryColor }}>
                         AI Technical Fellow In-Residence
                     </p>
-                    <p className="text-xl text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                    <p className="text-xl md:text-2xl text-neutral-600 dark:text-neutral-400 leading-relaxed font-light tracking-tight max-w-3xl">
                         {isExecutive
-                            ? "CEO of STEMAIDE Africa • 7+ years building solutions that impact 500+ youth across Africa • 3x Founder"
-                            : "Software Engineer & UX Specialist with deep expertise in AI/ML, EdTech platforms, and human-centered design for underserved populations."}
+                            ? "CEO of STEMAIDE Africa. Building solutions that impact 500+ youth across Africa. 3x Founder."
+                            : "Software Engineer & UX Specialist. Deep expertise in AI/ML, EdTech platforms, and human-centered design for underserved populations."}
                     </p>
                 </motion.header>
 
@@ -189,31 +189,35 @@ export default function AboutPage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: theme.animationSpeed }}
-                    className="mb-16"
+                    className="mb-24"
                 >
-                    <div
-                        className="p-8 rounded-2xl bg-neutral-50 dark:bg-neutral-900"
-                        style={{ borderLeft: `4px solid ${theme.primaryColor}` }}
-                    >
-                        <h2 className="text-2xl font-bold text-neutral-900 dark:text-white mb-4">
-                            Creative Directing Reformer
-                        </h2>
-                        <p className="text-lg text-neutral-700 dark:text-neutral-300 mb-6 leading-relaxed">
-                            My personality profile combines decisive action orientation with analytical precision.
-                            I thrive on organizing chaos into logical systems and delivering measurable results.
-                            As a 3x founder and AI Technical Fellow, I lead initiatives in EdTech, STEM education,
-                            and digital inclusion across Africa.
-                        </p>
-                        <div className="flex flex-wrap gap-3">
-                            <span className="px-4 py-2 rounded-full text-sm font-medium bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300">
-                                81% Directing
-                            </span>
-                            <span className="px-4 py-2 rounded-full text-sm font-medium bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300">
-                                68% Accommodating
-                            </span>
-                            <span className="px-4 py-2 rounded-full text-sm font-medium bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">
-                                63% Analytical
-                            </span>
+                    <div className="grid md:grid-cols-12 gap-12">
+                        <div className="md:col-span-4">
+                            <h2 className="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">
+                                Personality
+                            </h2>
+                            <h3 className="text-3xl font-bold text-neutral-900 dark:text-white mb-4 tracking-tight">
+                                Creative Directing Reformer
+                            </h3>
+                        </div>
+                        <div className="md:col-span-8">
+                            <p className="text-lg text-neutral-600 dark:text-neutral-400 mb-8 leading-relaxed font-light">
+                                My personality profile combines decisive action orientation with analytical precision.
+                                I thrive on organizing chaos into logical systems and delivering measurable results.
+                                As a 3x founder and AI Technical Fellow, I lead initiatives in EdTech, STEM education,
+                                and digital inclusion across Africa.
+                            </p>
+                            <div className="flex flex-wrap gap-4">
+                                <span className="px-4 py-2 rounded-full text-sm font-medium bg-neutral-100 dark:bg-neutral-900 text-neutral-900 dark:text-white border border-neutral-200 dark:border-neutral-800">
+                                    81% Directing
+                                </span>
+                                <span className="px-4 py-2 rounded-full text-sm font-medium bg-neutral-100 dark:bg-neutral-900 text-neutral-900 dark:text-white border border-neutral-200 dark:border-neutral-800">
+                                    68% Accommodating
+                                </span>
+                                <span className="px-4 py-2 rounded-full text-sm font-medium bg-neutral-100 dark:bg-neutral-900 text-neutral-900 dark:text-white border border-neutral-200 dark:border-neutral-800">
+                                    63% Analytical
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </motion.section>
@@ -224,26 +228,25 @@ export default function AboutPage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: theme.animationSpeed }}
-                    className="mb-16"
+                    className="mb-24"
                 >
-                    <h2 className="text-3xl font-bold text-neutral-900 dark:text-white mb-8">
+                    <h2 className="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-12">
                         Key Qualifications
                     </h2>
-                    <div className="grid md:grid-cols-2 gap-3">
+                    <div className="grid md:grid-cols-2 gap-x-12 gap-y-6">
                         {keyQualifications.map((qual, index) => (
                             <motion.div
                                 key={index}
-                                initial={{ opacity: 0, x: -20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
+                                initial={{ opacity: 0, y: 10 }}
+                                whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: theme.animationSpeed, delay: index * 0.03 }}
-                                className="flex items-start gap-3"
+                                className="flex items-start gap-4"
                             >
-                                <div
-                                    className="w-2 h-2 rounded-full mt-2 flex-shrink-0"
-                                    style={{ backgroundColor: theme.primaryColor }}
-                                />
-                                <span className="text-neutral-700 dark:text-neutral-300 text-sm">{qual}</span>
+                                <span className="text-neutral-300 dark:text-neutral-700 mt-1">•</span>
+                                <span className="text-neutral-700 dark:text-neutral-300 leading-relaxed font-light">
+                                    {qual}
+                                </span>
                             </motion.div>
                         ))}
                     </div>
@@ -255,12 +258,12 @@ export default function AboutPage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: theme.animationSpeed }}
-                    className="mb-16"
+                    className="mb-24"
                 >
-                    <h2 className="text-3xl font-bold text-neutral-900 dark:text-white mb-8">
+                    <h2 className="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-12">
                         Core Strengths
                     </h2>
-                    <div className="grid md:grid-cols-2 gap-6">
+                    <div className="grid md:grid-cols-2 gap-8">
                         {strengths.map((strength, index) => (
                             <motion.div
                                 key={strength.title}
@@ -268,16 +271,16 @@ export default function AboutPage() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: theme.animationSpeed, delay: index * 0.1 }}
-                                className="p-6 rounded-xl bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800"
+                                className="group p-8 rounded-2xl bg-white dark:bg-neutral-900 border border-neutral-100 dark:border-neutral-800 hover:shadow-xl transition-all duration-300"
                             >
                                 <div
-                                    className="w-3 h-3 rounded-full mb-4"
+                                    className="w-2 h-2 rounded-full mb-6 transition-transform duration-300 group-hover:scale-150"
                                     style={{ backgroundColor: strength.color }}
                                 />
-                                <h3 className="text-lg font-bold text-neutral-900 dark:text-white mb-2">
+                                <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-3 tracking-tight">
                                     {strength.title}
                                 </h3>
-                                <p className="text-neutral-600 dark:text-neutral-400">
+                                <p className="text-neutral-500 dark:text-neutral-400 font-light leading-relaxed">
                                     {strength.description}
                                 </p>
                             </motion.div>
@@ -291,23 +294,23 @@ export default function AboutPage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: theme.animationSpeed }}
-                    className="mb-16"
+                    className="mb-24"
                 >
-                    <h2 className="text-3xl font-bold text-neutral-900 dark:text-white mb-8">
-                        Skills
+                    <h2 className="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-12">
+                        Technical Arsenal
                     </h2>
-                    <div className="space-y-6">
+                    <div className="space-y-12">
                         {isTechnical && (
                             <>
                                 <div>
-                                    <h3 className="text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-3">
-                                        AI / Machine Learning
+                                    <h3 className="text-lg font-medium text-neutral-900 dark:text-white mb-6 tracking-tight">
+                                        AI & Machine Learning
                                     </h3>
                                     <div className="flex flex-wrap gap-2">
                                         {skills.aiMl.map((skill) => (
                                             <span
                                                 key={skill}
-                                                className="px-3 py-1 text-xs font-mono bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-lg"
+                                                className="px-4 py-2 text-sm text-neutral-600 dark:text-neutral-400 bg-neutral-100 dark:bg-neutral-800/50 rounded-full border border-neutral-200 dark:border-neutral-800"
                                             >
                                                 {skill}
                                             </span>
@@ -315,14 +318,14 @@ export default function AboutPage() {
                                     </div>
                                 </div>
                                 <div>
-                                    <h3 className="text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-3">
-                                        MLOps / DevOps
+                                    <h3 className="text-lg font-medium text-neutral-900 dark:text-white mb-6 tracking-tight">
+                                        MLOps & DevOps
                                     </h3>
                                     <div className="flex flex-wrap gap-2">
                                         {skills.devOps.map((skill) => (
                                             <span
                                                 key={skill}
-                                                className="px-3 py-1 text-xs font-mono bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 rounded-lg"
+                                                className="px-4 py-2 text-sm text-neutral-600 dark:text-neutral-400 bg-neutral-100 dark:bg-neutral-800/50 rounded-full border border-neutral-200 dark:border-neutral-800"
                                             >
                                                 {skill}
                                             </span>
@@ -332,14 +335,14 @@ export default function AboutPage() {
                             </>
                         )}
                         <div>
-                            <h3 className="text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-3">
+                            <h3 className="text-lg font-medium text-neutral-900 dark:text-white mb-6 tracking-tight">
                                 Programming Languages
                             </h3>
                             <div className="flex flex-wrap gap-2">
                                 {skills.technical.map((skill) => (
                                     <span
                                         key={skill}
-                                        className="px-3 py-1 text-xs font-mono bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 rounded-lg"
+                                        className="px-4 py-2 text-sm text-neutral-600 dark:text-neutral-400 bg-neutral-100 dark:bg-neutral-800/50 rounded-full border border-neutral-200 dark:border-neutral-800"
                                     >
                                         {skill}
                                     </span>
@@ -347,14 +350,14 @@ export default function AboutPage() {
                             </div>
                         </div>
                         <div>
-                            <h3 className="text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-3">
+                            <h3 className="text-lg font-medium text-neutral-900 dark:text-white mb-6 tracking-tight">
                                 {isTechnical ? 'Databases' : 'Digital Skills'}
                             </h3>
                             <div className="flex flex-wrap gap-2">
                                 {(isTechnical ? skills.databases : skills.digital).map((skill) => (
                                     <span
                                         key={skill}
-                                        className="px-3 py-1 text-xs font-mono bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 rounded-lg"
+                                        className="px-4 py-2 text-sm text-neutral-600 dark:text-neutral-400 bg-neutral-100 dark:bg-neutral-800/50 rounded-full border border-neutral-200 dark:border-neutral-800"
                                     >
                                         {skill}
                                     </span>
@@ -362,14 +365,14 @@ export default function AboutPage() {
                             </div>
                         </div>
                         <div>
-                            <h3 className="text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-3">
+                            <h3 className="text-lg font-medium text-neutral-900 dark:text-white mb-6 tracking-tight">
                                 Tools & Platforms
                             </h3>
                             <div className="flex flex-wrap gap-2">
                                 {skills.tools.map((skill) => (
                                     <span
                                         key={skill}
-                                        className="px-3 py-1 text-xs font-mono bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 rounded-lg"
+                                        className="px-4 py-2 text-sm text-neutral-600 dark:text-neutral-400 bg-neutral-100 dark:bg-neutral-800/50 rounded-full border border-neutral-200 dark:border-neutral-800"
                                     >
                                         {skill}
                                     </span>
@@ -385,12 +388,12 @@ export default function AboutPage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: theme.animationSpeed }}
-                    className="mb-16"
+                    className="mb-24"
                 >
-                    <h2 className="text-3xl font-bold text-neutral-900 dark:text-white mb-8">
-                        Professional Experience
+                    <h2 className="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-12">
+                        History
                     </h2>
-                    <div className="space-y-0">
+                    <div className="relative border-l border-neutral-200 dark:border-neutral-800 ml-3 space-y-12 pb-4">
                         {experiences.map((exp, index) => (
                             <motion.div
                                 key={exp.role + exp.company}
@@ -398,34 +401,38 @@ export default function AboutPage() {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: theme.animationSpeed, delay: index * 0.08 }}
-                                className="relative pl-8 pb-8 border-l-2 border-neutral-200 dark:border-neutral-800 last:pb-0"
+                                className="relative pl-12"
                             >
                                 <div
-                                    className="absolute left-0 top-0 w-4 h-4 rounded-full -translate-x-[9px]"
-                                    style={{ backgroundColor: theme.primaryColor }}
+                                    className="absolute left-[-5px] top-2 w-2.5 h-2.5 rounded-full bg-white dark:bg-neutral-950 border-2"
+                                    style={{ borderColor: theme.primaryColor }}
                                 />
-                                <p className="text-sm font-medium text-neutral-500 dark:text-neutral-400 mb-1">
-                                    {exp.period}
-                                </p>
-                                <h3 className="text-xl font-bold text-neutral-900 dark:text-white">
-                                    {exp.role}
-                                </h3>
-                                {exp.link !== '#' ? (
-                                    <a
-                                        href={exp.link}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="font-medium mb-2 inline-block hover:underline"
-                                        style={{ color: theme.primaryColor }}
-                                    >
-                                        {exp.company} ↗
-                                    </a>
-                                ) : (
-                                    <p className="font-medium mb-2" style={{ color: theme.primaryColor }}>
-                                        {exp.company}
-                                    </p>
-                                )}
-                                <p className="text-neutral-600 dark:text-neutral-400 text-sm">
+                                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2 gap-2">
+                                    <h3 className="text-xl font-bold text-neutral-900 dark:text-white tracking-tight">
+                                        {exp.role}
+                                    </h3>
+                                    <span className="text-sm font-mono text-neutral-400">
+                                        {exp.period}
+                                    </span>
+                                </div>
+                                <div className="mb-4">
+                                    {exp.link !== '#' ? (
+                                        <a
+                                            href={exp.link}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-base font-medium hover:underline transition-colors block"
+                                            style={{ color: theme.primaryColor }}
+                                        >
+                                            {exp.company}
+                                        </a>
+                                    ) : (
+                                        <p className="text-base font-medium" style={{ color: theme.primaryColor }}>
+                                            {exp.company}
+                                        </p>
+                                    )}
+                                </div>
+                                <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed font-light">
                                     {exp.description}
                                 </p>
                             </motion.div>
@@ -439,12 +446,12 @@ export default function AboutPage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: theme.animationSpeed }}
-                    className="mb-16"
+                    className="mb-24"
                 >
-                    <h2 className="text-3xl font-bold text-neutral-900 dark:text-white mb-8">
+                    <h2 className="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-12">
                         Education
                     </h2>
-                    <div className="space-y-3">
+                    <div className="grid md:grid-cols-2 gap-6">
                         {education.map((edu, index) => (
                             <motion.div
                                 key={edu.degree}
@@ -452,20 +459,19 @@ export default function AboutPage() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: theme.animationSpeed, delay: index * 0.05 }}
-                                className="p-4 rounded-xl bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800"
+                                className="p-6 rounded-xl bg-neutral-50 dark:bg-neutral-900/50 border border-neutral-100 dark:border-neutral-800"
                             >
                                 <div className="flex justify-between items-start gap-4">
                                     <div>
-                                        <h3 className="font-bold text-neutral-900 dark:text-white text-sm">
+                                        <h3 className="font-bold text-neutral-900 dark:text-white text-sm mb-2">
                                             {edu.degree}
                                         </h3>
-                                        <p className="text-neutral-600 dark:text-neutral-400 text-sm">
+                                        <p className="text-neutral-500 dark:text-neutral-400 text-sm">
                                             {edu.institution}
                                         </p>
                                     </div>
                                     <span
-                                        className="text-xs font-medium px-2 py-1 rounded flex-shrink-0"
-                                        style={{ backgroundColor: `${theme.primaryColor}20`, color: theme.primaryColor }}
+                                        className="text-xs font-mono px-2 py-1 rounded flex-shrink-0 text-neutral-500 bg-neutral-200 dark:bg-neutral-800"
                                     >
                                         {edu.year}
                                     </span>
@@ -481,28 +487,20 @@ export default function AboutPage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: theme.animationSpeed }}
-                    className="mb-16"
+                    className="mb-24"
                 >
-                    <h2 className="text-3xl font-bold text-neutral-900 dark:text-white mb-8">
+                    <h2 className="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-12">
                         Languages
                     </h2>
-                    <div className="grid md:grid-cols-2 gap-4">
+                    <div className="grid md:grid-cols-4 gap-6">
                         {languages.map((lang) => (
                             <div
                                 key={lang.name}
-                                className="p-4 rounded-xl bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800"
+                                className="p-6 rounded-xl bg-neutral-50 dark:bg-neutral-900/50 border border-neutral-100 dark:border-neutral-800 text-center"
                             >
-                                <h3 className="font-bold text-neutral-900 dark:text-white mb-2">{lang.name}</h3>
-                                <div className="flex gap-4 text-xs">
-                                    <span className="text-neutral-600 dark:text-neutral-400">
-                                        Reading: <span className="font-medium">{lang.reading === 1 ? 'Excellent' : lang.reading <= 3 ? 'Good' : 'Basic'}</span>
-                                    </span>
-                                    <span className="text-neutral-600 dark:text-neutral-400">
-                                        Speaking: <span className="font-medium">{lang.speaking === 1 ? 'Excellent' : lang.speaking <= 3 ? 'Good' : 'Basic'}</span>
-                                    </span>
-                                    <span className="text-neutral-600 dark:text-neutral-400">
-                                        Writing: <span className="font-medium">{lang.writing === 1 ? 'Excellent' : lang.writing <= 3 ? 'Good' : 'Basic'}</span>
-                                    </span>
+                                <h3 className="font-bold text-neutral-900 dark:text-white mb-4">{lang.name}</h3>
+                                <div className="space-y-2 text-xs text-neutral-500 dark:text-neutral-400">
+                                    <p>Native / Fluent</p>
                                 </div>
                             </div>
                         ))}
@@ -515,21 +513,21 @@ export default function AboutPage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: theme.animationSpeed }}
-                    className="mb-16"
+                    className="mb-24"
                 >
-                    <h2 className="text-3xl font-bold text-neutral-900 dark:text-white mb-8">
-                        Professional Affiliations
+                    <h2 className="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-12">
+                        Affiliations
                     </h2>
-                    <div className="flex flex-wrap gap-3">
+                    <div className="flex flex-wrap gap-4">
                         {affiliations.map((org) => (
                             <a
                                 key={org.name}
                                 href={org.link}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="px-4 py-2 rounded-lg bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors text-sm"
+                                className="px-6 py-3 rounded-xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400 hover:border-neutral-300 dark:hover:border-neutral-700 transition-all text-sm font-medium hover:shadow-sm"
                             >
-                                {org.name} {org.link !== '#' && '↗'}
+                                {org.name}
                             </a>
                         ))}
                     </div>
@@ -541,18 +539,18 @@ export default function AboutPage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: theme.animationSpeed }}
-                    className="text-center"
+                    className="text-center py-12"
                 >
-                    <h2 className="text-3xl font-bold text-neutral-900 dark:text-white mb-4">
+                    <h2 className="text-4xl font-bold text-neutral-900 dark:text-white mb-6 tracking-tight">
                         Let&apos;s Build Something Exceptional
                     </h2>
-                    <p className="text-neutral-600 dark:text-neutral-400 mb-8">
+                    <p className="text-neutral-600 dark:text-neutral-400 mb-10 text-lg font-light">
                         Ready to transform your ideas into reality?
                     </p>
-                    <div className="flex flex-wrap justify-center gap-4">
+                    <div className="flex flex-wrap justify-center gap-6">
                         <Link
                             href="/contact"
-                            className="inline-flex items-center gap-2 px-8 py-4 text-white font-semibold rounded-lg transition-transform hover:scale-105"
+                            className="inline-flex items-center gap-2 px-8 py-4 text-white font-semibold rounded-full transition-transform hover:scale-105 shadow-lg shadow-blue-500/20"
                             style={{ backgroundColor: theme.primaryColor }}
                         >
                             Get in Touch
@@ -574,9 +572,9 @@ export default function AboutPage() {
                             href="https://xdagee.github.io"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 px-8 py-4 font-semibold rounded-lg border-2 text-neutral-900 dark:text-white border-neutral-300 dark:border-neutral-700 transition-colors hover:border-neutral-400 dark:hover:border-neutral-600"
+                            className="inline-flex items-center gap-2 px-8 py-4 font-semibold rounded-full border-2 text-neutral-900 dark:text-white border-neutral-200 dark:border-neutral-800 transition-colors hover:border-neutral-400 dark:hover:border-neutral-600"
                         >
-                            View Portfolio ↗
+                            View Old Portfolio
                         </a>
                     </div>
                 </motion.div>

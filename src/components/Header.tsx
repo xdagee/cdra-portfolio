@@ -1,9 +1,11 @@
 'use client';
 
+import { useState } from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { PersonalityToggle } from './PersonalityToggle';
 import { usePersonality } from '@/hooks/usePersonality';
+import { Logo } from './Logo';
 
 const navItems = [
     { href: '/', label: 'Home' },
@@ -14,6 +16,7 @@ const navItems = [
 
 export const Header = () => {
     const { theme } = usePersonality();
+    const [isOpen, setIsOpen] = useState(false);
 
     return (
         <motion.header
@@ -27,21 +30,15 @@ export const Header = () => {
                     {/* Logo / Monogram */}
                     <Link
                         href="/"
-                        className="flex items-center gap-2 group"
+                        className="group"
                         aria-label="Prince Boateng Asare - Home"
+                        onClick={() => setIsOpen(false)}
                     >
-                        <div
-                            className="w-10 h-10 rounded-lg flex items-center justify-center font-bold text-white transition-transform duration-200 group-hover:scale-105"
-                            style={{ backgroundColor: theme.primaryColor }}
-                        >
-                            PB
-                        </div>
-                        <span className="hidden sm:block font-semibold text-neutral-900 dark:text-white">
-                            Prince Boateng Asare
-                        </span>
+                        <Logo showName className="hidden sm:flex" />
+                        <Logo className="flex sm:hidden" />
                     </Link>
 
-                    {/* Navigation */}
+                    {/* Desktop Navigation */}
                     <nav className="hidden md:flex items-center gap-8" aria-label="Main navigation">
                         {navItems.map((item) => (
                             <Link
@@ -58,10 +55,58 @@ export const Header = () => {
                         ))}
                     </nav>
 
-                    {/* Personality Toggle */}
-                    <PersonalityToggle />
+                    <div className="flex items-center gap-4">
+                        {/* Personality Toggle */}
+                        <PersonalityToggle />
+
+                        {/* Mobile Menu Button */}
+                        <button
+                            onClick={() => setIsOpen(!isOpen)}
+                            className="md:hidden relative z-50 p-2 -mr-2 text-neutral-600 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white bg-transparent"
+                            aria-label="Toggle menu"
+                        >
+                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                {isOpen ? (
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                                ) : (
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                                )}
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
+
+            {/* Mobile Navigation */}
+            <AnimatePresence>
+                {isOpen && (
+                    <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        className="md:hidden border-t border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-950 overflow-hidden"
+                    >
+                        <nav className="flex flex-col p-6 gap-2">
+                            {navItems.map((item, index) => (
+                                <motion.div
+                                    key={item.href}
+                                    initial={{ opacity: 0, x: -20 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{ delay: index * 0.1 }}
+                                >
+                                    <Link
+                                        href={item.href}
+                                        onClick={() => setIsOpen(false)}
+                                        className="block text-lg font-medium text-neutral-600 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white py-3 px-4 -mx-4 rounded-lg hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors"
+                                    >
+                                        {item.label}
+                                    </Link>
+                                </motion.div>
+                            ))}
+                        </nav>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </motion.header>
     );
 };
