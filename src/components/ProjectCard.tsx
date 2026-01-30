@@ -29,8 +29,7 @@ export const ProjectCard = ({ project, index = 0 }: ProjectCardProps) => {
                     <div className={`p-6 ${theme.layoutDensity === 'compact' ? 'space-y-3' : 'space-y-4'}`}>
                         {/* Category Eyebrow */}
                         <span
-                            className="text-xs font-semibold uppercase tracking-wider"
-                            style={{ color: theme.primaryColor }}
+                            className="text-xs font-semibold uppercase tracking-wider text-primary"
                         >
                             {project.category}
                         </span>
@@ -85,7 +84,7 @@ export const ProjectCard = ({ project, index = 0 }: ProjectCardProps) => {
                         )}
 
                         {/* View Project Link */}
-                        <div className="flex items-center gap-2 pt-2 text-sm font-medium" style={{ color: theme.primaryColor }}>
+                        <div className="flex items-center gap-2 pt-2 text-sm font-medium text-primary">
                             <span>View {mode === 'EXECUTIVE' ? 'Results' : 'Details'}</span>
                             <svg
                                 className="w-4 h-4 transition-transform group-hover:translate-x-1"

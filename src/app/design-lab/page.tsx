@@ -41,8 +41,7 @@ export default function DesignLab() {
                     className="mb-12"
                 >
                     <span
-                        className="inline-block px-3 py-1 text-sm font-semibold text-white rounded-full mb-4"
-                        style={{ backgroundColor: theme.primaryColor }}
+                        className="inline-block px-3 py-1 text-sm font-semibold text-white rounded-full mb-4 bg-primary"
                     >
                         Brand Identity
                     </span>
@@ -52,12 +51,10 @@ export default function DesignLab() {
 
                     {/* Key Metrics Banner */}
                     <div
-                        className="p-6 rounded-xl"
-                        style={{ backgroundColor: `${theme.primaryColor}10` }}
+                        className="p-6 rounded-xl bg-primary/10"
                     >
                         <p
-                            className="text-xl font-bold"
-                            style={{ color: theme.primaryColor }}
+                            className="text-xl font-bold text-primary"
                         >
                             3 Design concepts, Psychometric alignment, Interactive showcase
                         </p>
@@ -74,8 +71,7 @@ export default function DesignLab() {
                     {/* Problem Section */}
                     <section>
                         <h2
-                            className="text-2xl font-bold mb-4 flex items-center gap-3"
-                            style={{ color: theme.primaryColor }}
+                            className="text-2xl font-bold mb-4 flex items-center gap-3 text-primary"
                         >
                             <span className="w-8 h-8 rounded-full bg-current flex items-center justify-center text-white text-sm">
                                 1
@@ -90,8 +86,7 @@ export default function DesignLab() {
                     {/* Process Section (The Design Lab) */}
                     <section>
                         <h2
-                            className="text-2xl font-bold mb-4 flex items-center gap-3"
-                            style={{ color: theme.primaryColor }}
+                            className="text-2xl font-bold mb-4 flex items-center gap-3 text-primary"
                         >
                             <span className="w-8 h-8 rounded-full bg-current flex items-center justify-center text-white text-sm">
                                 2
@@ -111,7 +106,7 @@ export default function DesignLab() {
                                             <rect x="25" y="20" width="10" height="60" fill="currentColor" className="text-neutral-900 dark:text-white" />
                                             <path d="M35 20 H55 A15 15 0 0 1 55 50 H35" fill="none" stroke="currentColor" strokeWidth="10" className="text-neutral-900 dark:text-white" />
                                             <path d="M35 50 H55 A15 15 0 0 1 55 80 H35" fill="none" stroke="currentColor" strokeWidth="10" className="text-neutral-900 dark:text-white" />
-                                            <circle cx="85" cy="80" r="5" fill={theme.primaryColor} />
+                                            <circle cx="85" cy="80" r="5" className="fill-primary" />
                                         </svg>
                                         <h4 className="font-bold text-neutral-900 dark:text-white uppercase tracking-widest text-sm">Prince Boateng Asare</h4>
                                     </div>
@@ -132,8 +127,7 @@ export default function DesignLab() {
                                         <div className="mb-4 text-7xl font-bold tracking-tighter text-neutral-900 dark:text-white leading-none relative">
                                             PB
                                             <span
-                                                className="absolute -right-5 top-1 text-5xl"
-                                                style={{ color: theme.primaryColor }}
+                                                className="absolute -right-5 top-1 text-5xl text-primary"
                                             >.</span>
                                         </div>
                                         <div className="text-sm font-semibold tracking-widest uppercase text-neutral-900 dark:text-white">
@@ -155,9 +149,9 @@ export default function DesignLab() {
                                 <div className="aspect-square md:aspect-video bg-white dark:bg-neutral-900 rounded-3xl border border-neutral-200 dark:border-neutral-800 flex items-center justify-center p-8 shadow-sm hover:shadow-lg transition-shadow duration-300">
                                     <div className="text-center">
                                         <div className="relative font-mono font-bold text-6xl text-neutral-900 dark:text-white mb-4">
-                                            <span style={{ color: theme.primaryColor }}>&lt;</span>
+                                            <span className="text-primary">&lt;</span>
                                             PB
-                                            <span style={{ color: theme.primaryColor }}>/&gt;</span>
+                                            <span className="text-primary">/&gt;</span>
                                         </div>
                                         <div className="font-mono text-sm text-neutral-500 dark:text-neutral-400">
                                             {'// Prince Boateng Asare'}
@@ -197,8 +191,7 @@ export default function DesignLab() {
                     {/* Result Section */}
                     <section>
                         <h2
-                            className="text-2xl font-bold mb-4 flex items-center gap-3"
-                            style={{ color: theme.primaryColor }}
+                            className="text-2xl font-bold mb-4 flex items-center gap-3 text-primary"
                         >
                             <span className="w-8 h-8 rounded-full bg-current flex items-center justify-center text-white text-sm">
                                 3
@@ -228,8 +221,7 @@ export default function DesignLab() {
                     <div className="flex justify-between items-center">
                         <Link
                             href="/projects"
-                            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-white transition-transform hover:scale-105"
-                            style={{ backgroundColor: theme.primaryColor }}
+                            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-white transition-transform hover:scale-105 bg-primary"
                         >
                             View All Projects
                         </Link>

@@ -15,7 +15,7 @@ export const Hero = () => {
                 <div
                     className="absolute top-0 right-0 w-1/2 h-1/2 opacity-10"
                     style={{
-                        background: `radial-gradient(circle at center, ${theme.primaryColor} 0%, transparent 70%)`,
+                        background: `radial-gradient(circle at center, var(--primary) 0%, transparent 70%)`,
                     }}
                 />
             </div>
@@ -37,8 +37,7 @@ export const Hero = () => {
                             className="mb-6"
                         >
                             <span
-                                className="text-sm font-semibold tracking-wider uppercase"
-                                style={{ color: theme.primaryColor }}
+                                className="text-sm font-semibold tracking-wider uppercase text-primary"
                             >
                                 Creative Directing Reformer
                             </span>
@@ -48,7 +47,7 @@ export const Hero = () => {
                         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-neutral-900 dark:text-white leading-tight mb-6 heading-display">
                             Prince Boateng
                             <br />
-                            <span style={{ color: theme.primaryColor }}>Asare</span>
+                            <span className="text-primary">Asare</span>
                         </h1>
 
                         {/* Subheadline */}
@@ -68,8 +67,7 @@ export const Hero = () => {
                         >
                             <Link
                                 href="/projects"
-                                className="inline-flex items-center gap-2 px-8 py-4 text-white font-semibold rounded-lg transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
-                                style={{ backgroundColor: theme.primaryColor }}
+                                className="inline-flex items-center gap-2 px-8 py-4 text-white font-semibold rounded-lg transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg bg-primary"
                             >
                                 View Projects
                                 <svg
@@ -100,8 +98,7 @@ export const Hero = () => {
                         <div className="relative">
                             {/* Abstract Shape */}
                             <div
-                                className="w-80 h-80 mx-auto rounded-3xl transform rotate-6 opacity-20"
-                                style={{ backgroundColor: theme.primaryColor }}
+                                className="w-80 h-80 mx-auto rounded-3xl transform rotate-6 opacity-20 bg-primary"
                             />
                             <div
                                 className="absolute inset-4 rounded-2xl bg-white dark:bg-neutral-800 shadow-2xl transform -rotate-3"
@@ -116,7 +113,7 @@ export const Hero = () => {
                                         <div className="space-y-2 font-mono text-sm">
                                             <div className="text-neutral-400">// Do it now.</div>
                                             <div className="text-neutral-600 dark:text-neutral-300">
-                                                <span style={{ color: theme.primaryColor }}>const</span> approach = {'{'}</div>
+                                                <span className="text-primary">const</span> approach = {'{'}</div>
                                             <div className="pl-4 text-neutral-600 dark:text-neutral-300">
                                                 action: <span className="text-green-600">&quot;decisive&quot;</span>,</div>
                                             <div className="pl-4 text-neutral-600 dark:text-neutral-300">
@@ -134,6 +131,6 @@ export const Hero = () => {
 
 
             </div>
-        </section>
+        </section >
     );
 };

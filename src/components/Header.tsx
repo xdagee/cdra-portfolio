@@ -48,8 +48,7 @@ export const Header = () => {
                             >
                                 {item.label}
                                 <span
-                                    className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-200 group-hover:w-full"
-                                    style={{ backgroundColor: theme.primaryColor }}
+                                    className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-200 group-hover:w-full bg-primary"
                                 />
                             </Link>
                         ))}

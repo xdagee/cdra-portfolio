@@ -3,6 +3,7 @@
 import { notFound } from 'next/navigation';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import { getProjectBySlug } from '@/data/projects';
 import { usePersonality } from '@/hooks/usePersonality';
 
@@ -57,8 +58,7 @@ export const ProjectDetail = ({ slug }: ProjectDetailProps) => {
                     className="mb-12"
                 >
                     <span
-                        className="inline-block px-3 py-1 text-sm font-semibold text-white rounded-full mb-4"
-                        style={{ backgroundColor: theme.primaryColor }}
+                        className="inline-block px-3 py-1 text-sm font-semibold text-white rounded-full mb-4 bg-primary"
                     >
                         {project.category}
                     </span>
@@ -66,14 +66,26 @@ export const ProjectDetail = ({ slug }: ProjectDetailProps) => {
                         {project.title}
                     </h1>
 
+                    {/* Hero Image */}
+                    {project.heroImage && (
+                        <div className="relative w-full aspect-video rounded-2xl overflow-hidden mb-8 shadow-lg">
+                            <Image
+                                src={project.heroImage}
+                                alt={project.title}
+                                fill
+                                className="object-cover transition-transform duration-700 hover:scale-105"
+                                priority
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 800px"
+                            />
+                        </div>
+                    )}
+
                     {/* Key Metrics Banner */}
                     <div
-                        className="p-6 rounded-xl"
-                        style={{ backgroundColor: `${theme.primaryColor}10` }}
+                        className="p-6 rounded-xl bg-primary/10"
                     >
                         <p
-                            className="text-xl font-bold"
-                            style={{ color: theme.primaryColor }}
+                            className="text-xl font-bold text-primary"
                         >
                             {project.outcomeMetrics}
                         </p>
@@ -90,8 +102,7 @@ export const ProjectDetail = ({ slug }: ProjectDetailProps) => {
                     {/* Problem Section */}
                     <section>
                         <h2
-                            className="text-2xl font-bold mb-4 flex items-center gap-3"
-                            style={{ color: theme.primaryColor }}
+                            className="text-2xl font-bold mb-4 flex items-center gap-3 text-primary"
                         >
                             <span className="w-8 h-8 rounded-full bg-current flex items-center justify-center text-white text-sm">
                                 1
@@ -106,8 +117,7 @@ export const ProjectDetail = ({ slug }: ProjectDetailProps) => {
                     {/* Process Section */}
                     <section>
                         <h2
-                            className="text-2xl font-bold mb-4 flex items-center gap-3"
-                            style={{ color: theme.primaryColor }}
+                            className="text-2xl font-bold mb-4 flex items-center gap-3 text-primary"
                         >
                             <span className="w-8 h-8 rounded-full bg-current flex items-center justify-center text-white text-sm">
                                 2
@@ -142,8 +152,7 @@ export const ProjectDetail = ({ slug }: ProjectDetailProps) => {
                     {mode === 'TECHNICAL' && project.highlightSnippet && (
                         <section>
                             <h2
-                                className="text-2xl font-bold mb-4 flex items-center gap-3"
-                                style={{ color: theme.primaryColor }}
+                                className="text-2xl font-bold mb-4 flex items-center gap-3 text-primary"
                             >
                                 <span className="w-8 h-8 rounded-full bg-current flex items-center justify-center text-white text-sm">
                                     ↓
@@ -168,8 +177,7 @@ export const ProjectDetail = ({ slug }: ProjectDetailProps) => {
                     {/* Result Section */}
                     <section>
                         <h2
-                            className="text-2xl font-bold mb-4 flex items-center gap-3"
-                            style={{ color: theme.primaryColor }}
+                            className="text-2xl font-bold mb-4 flex items-center gap-3 text-primary"
                         >
                             <span className="w-8 h-8 rounded-full bg-current flex items-center justify-center text-white text-sm">
                                 3
@@ -192,8 +200,7 @@ export const ProjectDetail = ({ slug }: ProjectDetailProps) => {
                     <div className="flex justify-between items-center">
                         <Link
                             href="/projects"
-                            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-white transition-transform hover:scale-105"
-                            style={{ backgroundColor: theme.primaryColor }}
+                            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-white transition-transform hover:scale-105 bg-primary"
                         >
                             View All Projects
                         </Link>

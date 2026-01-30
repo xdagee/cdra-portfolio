@@ -17,8 +17,7 @@ export const Logo = ({ className = '', showName = false }: LogoProps) => {
                     PB
                 </span>
                 <span
-                    className="absolute -right-1.5 top-0 text-2xl font-bold"
-                    style={{ color: theme.primaryColor }}
+                    className="absolute -right-1.5 top-0 text-2xl font-bold text-primary"
                 >
                     .
                 </span>

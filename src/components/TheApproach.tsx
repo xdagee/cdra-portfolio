@@ -46,8 +46,7 @@ export const TheApproach = () => {
                     className="text-center mb-16"
                 >
                     <div
-                        className="inline-block px-4 py-1 rounded-full text-sm font-semibold mb-4"
-                        style={{ backgroundColor: `${theme.primaryColor}20`, color: theme.primaryColor }}
+                        className="inline-block px-4 py-1 rounded-full text-sm font-semibold mb-4 bg-primary/20 text-primary"
                     >
                         The Approach
                     </div>
@@ -90,8 +89,7 @@ export const TheApproach = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: theme.animationSpeed }}
-                    className="bg-white dark:bg-neutral-800 rounded-2xl p-8 lg:p-12"
-                    style={{ borderLeft: `4px solid ${theme.primaryColor}` }}
+                    className="bg-white dark:bg-neutral-800 rounded-2xl p-8 lg:p-12 border-l-4 border-primary"
                 >
                     <div className="grid lg:grid-cols-2 gap-8 items-center">
                         <div>
@@ -114,8 +112,7 @@ export const TheApproach = () => {
                                     className="flex items-center gap-3"
                                 >
                                     <div
-                                        className="w-2 h-2 rounded-full flex-shrink-0"
-                                        style={{ backgroundColor: theme.primaryColor }}
+                                        className="w-2 h-2 rounded-full flex-shrink-0 bg-primary"
                                     />
                                     <span className="text-neutral-700 dark:text-neutral-300">{point}</span>
                                 </motion.div>

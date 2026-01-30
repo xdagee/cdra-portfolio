@@ -37,12 +37,10 @@ export default function ContactPage() {
                 >
                     <div className="flex items-center gap-2 mb-6">
                         <div
-                            className="w-12 h-0.5"
-                            style={{ backgroundColor: theme.primaryColor }}
+                            className="w-12 h-0.5 bg-primary"
                         />
                         <span
-                            className="text-sm font-semibold tracking-wider uppercase"
-                            style={{ color: theme.primaryColor }}
+                            className="text-sm font-semibold tracking-wider uppercase text-primary"
                         >
                             Contact
                         </span>
@@ -81,8 +79,7 @@ export default function ContactPage() {
                                             {item.label}
                                         </p>
                                         <p
-                                            className="font-medium group-hover:underline transition-colors"
-                                            style={{ color: theme.primaryColor }}
+                                            className="font-medium group-hover:underline transition-colors text-primary"
                                         >
                                             {item.value}
                                         </p>
@@ -96,11 +93,7 @@ export default function ContactPage() {
                                 Availability
                             </h2>
                             <div
-                                className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium"
-                                style={{
-                                    backgroundColor: `${theme.primaryColor}20`,
-                                    color: theme.primaryColor,
-                                }}
+                                className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-primary/20 text-primary"
                             >
                                 <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
                                 Available for new projects

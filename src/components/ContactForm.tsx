@@ -42,13 +42,11 @@ export const ContactForm = () => {
                 className="text-center py-12"
             >
                 <div
-                    className="w-16 h-16 rounded-full mx-auto mb-6 flex items-center justify-center"
-                    style={{ backgroundColor: `${theme.primaryColor}20` }}
+                    className="w-16 h-16 rounded-full mx-auto mb-6 flex items-center justify-center bg-primary/20"
                 >
                     <svg
-                        className="w-8 h-8"
+                        className="w-8 h-8 stroke-primary"
                         fill="none"
-                        stroke={theme.primaryColor}
                         viewBox="0 0 24 24"
                     >
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -176,8 +174,7 @@ export const ContactForm = () => {
                 disabled={isSubmitting}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full py-4 rounded-lg font-semibold text-white transition-all disabled:opacity-50 disabled:cursor-not-allowed"
-                style={{ backgroundColor: theme.primaryColor }}
+                className="w-full py-4 rounded-lg font-semibold text-white transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-primary"
             >
                 {isSubmitting ? (
                     <span className="flex items-center justify-center gap-2">

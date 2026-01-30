@@ -20,12 +20,10 @@ export default function ProjectsPage() {
                 >
                     <div className="flex items-center gap-2 mb-6">
                         <div
-                            className="w-12 h-0.5"
-                            style={{ backgroundColor: theme.primaryColor }}
+                            className="w-12 h-0.5 bg-primary"
                         />
                         <span
-                            className="text-sm font-semibold tracking-wider uppercase"
-                            style={{ color: theme.primaryColor }}
+                            className="text-sm font-semibold tracking-wider uppercase text-primary"
                         >
                             Portfolio
                         </span>
@@ -63,8 +61,7 @@ export default function ProjectsPage() {
                         </p>
                         <a
                             href="/contact"
-                            className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-white transition-transform hover:scale-105"
-                            style={{ backgroundColor: theme.primaryColor }}
+                            className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-white transition-transform hover:scale-105 bg-primary"
                         >
                             Start a Project
                         </a>

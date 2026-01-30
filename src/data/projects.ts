@@ -26,7 +26,7 @@ const results = {
     problem: 'The commodities market suffered from mistrust between buyers and suppliers, disconnection in the supply chain, and unequal access to fair trading platforms. Users needed a transparent marketplace where they could trade on fair deals.',
     process: 'Conducted extensive discovery research to understand user pain points. Created low-fidelity wireframes for landing page, user registration, and produce pages. Iterated through high-fidelity prototypes with focus on navigation, buttons, colors, and accessibility. Ran usability tests achieving 80% agreeability and maneuverability scores.',
     result: 'Delivered a marketplace design with AAA+ accessibility rating using Web AIM\'s color contrast tool. Increased CTA (POST button) conversion rate to 100% by making it standalone and clearer. Users can now successfully register, navigate, and post products with confidence.',
-    heroImage: '/images/projects/rawsrc-hero.jpg',
+    heroImage: '/images/projects/placeholder-hero.png',
     images: ['/images/projects/rawsrc-1.jpg', '/images/projects/rawsrc-2.jpg'],
   },
   {
@@ -56,7 +56,7 @@ const principles = {
     problem: 'Users struggled with time constraints, inconvenience of multiple payment apps, and bottlenecks when paying for items at local shops. They needed a single solution that worked across all local community shops.',
     process: 'Brainstormed and ideated on MVP focusing on key user stories: finding nearby shops, identifying proximity, finding items, comparing prices, and making payments. Created wireframes for nearby screen, login/register, add card, locate shop, find item, compare prices, and payment flows. Conducted several iterations and usability testing.',
     result: 'Created a payment app design built on three core principles: Efficiency, Convenience, and Less Hustle. Users reported feeling "relaxed and secured" - with their phone, they\'re covered without needing a physical wallet. Development will proceed using Flutter for web and mobile (Android & iOS).',
-    heroImage: '/images/projects/payall-hero.jpg',
+    heroImage: '/images/projects/placeholder-hero.png',
     images: ['/images/projects/payall-1.jpg', '/images/projects/payall-2.jpg'],
   },
   {
@@ -78,7 +78,7 @@ const skills = {
     problem: 'Organizations needed experienced software engineers who could both build enterprise solutions and transfer knowledge to growing teams.',
     process: 'Served as Software Engineer at WENOTEK, focusing on three pillars: Training (developing curriculum and mentoring), Development (building enterprise applications), and Writing (technical documentation and knowledge sharing).',
     result: 'Contributed to WENOTEK\'s growth as a technology partner, delivered enterprise software solutions, and established training programs that upskilled team members in modern development practices.',
-    heroImage: '/images/projects/wenotek-hero.jpg',
+    heroImage: '/images/projects/placeholder-hero.png',
     images: ['/images/projects/wenotek-1.jpg', '/images/projects/wenotek-2.jpg'],
   },
   {
@@ -106,7 +106,7 @@ const ecosystem = [
     problem: 'Ghana\'s technology sector needed skilled professionals and innovative solutions to drive digital transformation and national development.',
     process: 'Worked as Software Developer at AITI-KACE (Ghana\'s premier technology institute), focusing on Training (building local capacity), Development (creating impactful software solutions), and Research (driving innovation through R&D).',
     result: 'Contributed to national technology initiatives including STEMAIDE Africa and IoT Network Hub Africa. Helped build Ghana\'s technology capacity through training programs and research-driven development.',
-    heroImage: '/images/projects/aiti-kace-hero.jpg',
+    heroImage: '/images/projects/placeholder-hero.png',
     images: ['/images/projects/aiti-kace-1.jpg', '/images/projects/aiti-kace-2.jpg'],
   },
   {
@@ -131,7 +131,7 @@ const ecosystem = [
     problem: 'Needed a personal brand identity that accurately reflected the dual nature of an Executive (Results/Order) and Technical (Code/Systems) professional.',
     process: 'Established a "Design Lab" to iterate on three core philosophies: The Structural Reformer (Order), Absolute Clarity (Precision), and The Digital Architect (Code). Each concept was programmed as a scalable vector system.',
     result: 'Selected "Absolute Clarity" (Swiss Style) as the primary identity for its timeless confidence and unpretentious delivery, perfectly aligning with the "Steve Jobs" aesthetic.',
-    heroImage: '/images/projects/identity-hero.jpg',
+    heroImage: '/images/projects/placeholder-hero.png',
     images: [],
   },
 ];

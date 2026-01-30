@@ -1,36 +1,110 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Prince Boateng Asare - Creative Directing Reformer Portfolio
 
-## Getting Started
+![Project Banner](/images/projects/placeholder-hero.png)
 
-First, run the development server:
+A high-performance, personality-driven portfolio application built with Next.js 16, TypeScript, Tailwind CSS 4, and Framer Motion. This project showcases the dual nature of an "Executive" (Results/Strategic) and "Technical" (Code/Systems) professional profile through a dynamic, theme-switching UI.
+
+## 🚀 Features
+
+- **Dual Personality Mode**: Toggle between "Executive" (Strategic/Results) and "Technical" (Code/Details) views.
+- **Dynamic Theming**: Real-time theme switching using CSS variables and Tailwind CSS 4.
+- **Performance Optimized**:
+  - Image optimization with `next/image`.
+  - Font optimization with `next/font`.
+  - Zero layout shift.
+- **Modern Animations**: Smooth transitions and micro-interactions powered by Framer Motion.
+- **Type-Safe**: Built with strict TypeScript for robustness.
+- **Accessibility**: adherence to WCAG best practices.
+
+## 🛠 Tech Stack
+
+- **Framework**: Next.js 16.1.4 (App Router)
+- **Language**: TypeScript 5
+- **Styling**: Tailwind CSS 4.0 (Alpha/Beta) & CSS Variables
+- **State Management**: Zustand
+- **Animations**: Framer Motion 12
+- **Deployment**: Vercel (Recommended)
+
+## 📂 Project Structure
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+src/
+├── app/              # Next.js App Router pages
+├── components/       # Reusable UI components
+├── config/           # Theme and configuration files
+├── data/             # Static content data
+├── hooks/            # Custom React hooks
+├── store/            # Zustand state stores
+├── types/            # TypeScript type definitions
+└── utils/            # Helper functions
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ⚡ Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Prerequisites
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Node.js 18.17 or later
+- npm or yarn or pnpm
 
-## Learn More
+### Installation
 
-To learn more about Next.js, take a look at the following resources:
+1. Clone the repository:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    ```bash
+    git clone https://github.com/xdagee/cdra-portfolio.git
+    cd cdra-portfolio
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. Install dependencies:
 
-## Deploy on Vercel
+    ```bash
+    npm install
+    # or
+    yarn
+    # or
+    pnpm install
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. Run the development server:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+    ```bash
+    npm run dev
+    ```
+
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## 🎨 Theming System
+
+The theming system is built on top of CSS variables and Zustand.
+
+- **Global Variables**: defined in `src/app/globals.css` (e.g., `--primary`).
+- **State**: Managed in `src/store/personality.ts`.
+- **Sync**: `ThemeSync` component updates the root CSS variables whenever the state changes.
+
+To add a new theme, update `src/config/themes.ts` and `src/app/globals.css`.
+
+## 🧪 Testing
+
+The project includes a comprehensive testing suite:
+
+- **Unit/Integration**: Jest + React Testing Library
+- **E2E**: Playwright
+
+Run tests with:
+
+```bash
+npm test        # Run unit tests
+npm run test:e2e # Run E2E tests
+```
+
+## 🤝 Contributing
+
+Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+Designed & Developed by Prince Boateng Asare.

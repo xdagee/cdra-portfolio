@@ -29,11 +29,7 @@ export default function Home() {
           >
             <div>
               <div
-                className="inline-block px-4 py-1 rounded-full text-sm font-semibold mb-4"
-                style={{
-                  backgroundColor: `${theme.primaryColor}20`,
-                  color: theme.primaryColor,
-                }}
+                className="inline-block px-4 py-1 rounded-full text-sm font-semibold mb-4 bg-primary/20 text-primary"
               >
                 Featured Work
               </div>
@@ -43,8 +39,7 @@ export default function Home() {
             </div>
             <Link
               href="/projects"
-              className="hidden md:flex items-center gap-2 text-sm font-medium transition-colors"
-              style={{ color: theme.primaryColor }}
+              className="hidden md:flex items-center gap-2 text-sm font-medium transition-colors text-primary"
             >
               View All
               <svg
@@ -74,8 +69,7 @@ export default function Home() {
           <div className="mt-8 text-center md:hidden">
             <Link
               href="/projects"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-white transition-all hover:-translate-y-0.5 hover:shadow-lg"
-              style={{ backgroundColor: theme.primaryColor }}
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-white transition-all hover:-translate-y-0.5 hover:shadow-lg bg-primary"
             >
               View All Projects
             </Link>

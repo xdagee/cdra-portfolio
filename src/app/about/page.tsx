@@ -160,12 +160,10 @@ export default function AboutPage() {
                 >
                     <div className="flex items-center gap-3 mb-8">
                         <div
-                            className="w-12 h-[2px]"
-                            style={{ backgroundColor: theme.primaryColor }}
+                            className="w-12 h-[2px] bg-primary"
                         />
                         <span
-                            className="text-xs font-bold tracking-[0.2em] uppercase"
-                            style={{ color: theme.primaryColor }}
+                            className="text-xs font-bold tracking-[0.2em] uppercase text-primary"
                         >
                             Curriculum Vitae
                         </span>
@@ -173,7 +171,7 @@ export default function AboutPage() {
                     <h1 className="text-6xl md:text-7xl font-bold text-neutral-900 dark:text-white mb-6 tracking-tighter">
                         Prince Boateng Asare.
                     </h1>
-                    <p className="text-2xl font-medium mb-8 tracking-tight" style={{ color: theme.primaryColor }}>
+                    <p className="text-2xl font-medium mb-8 tracking-tight text-primary">
                         AI Technical Fellow In-Residence
                     </p>
                     <p className="text-xl md:text-2xl text-neutral-600 dark:text-neutral-400 leading-relaxed font-light tracking-tight max-w-3xl">
@@ -404,8 +402,7 @@ export default function AboutPage() {
                                 className="relative pl-12"
                             >
                                 <div
-                                    className="absolute left-[-5px] top-2 w-2.5 h-2.5 rounded-full bg-white dark:bg-neutral-950 border-2"
-                                    style={{ borderColor: theme.primaryColor }}
+                                    className="absolute left-[-5px] top-2 w-2.5 h-2.5 rounded-full bg-white dark:bg-neutral-950 border-2 border-primary"
                                 />
                                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2 gap-2">
                                     <h3 className="text-xl font-bold text-neutral-900 dark:text-white tracking-tight">
@@ -421,13 +418,12 @@ export default function AboutPage() {
                                             href={exp.link}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="text-base font-medium hover:underline transition-colors block"
-                                            style={{ color: theme.primaryColor }}
+                                            className="text-base font-medium hover:underline transition-colors block text-primary"
                                         >
                                             {exp.company}
                                         </a>
                                     ) : (
-                                        <p className="text-base font-medium" style={{ color: theme.primaryColor }}>
+                                        <p className="text-base font-medium text-primary">
                                             {exp.company}
                                         </p>
                                     )}
@@ -550,8 +546,7 @@ export default function AboutPage() {
                     <div className="flex flex-wrap justify-center gap-6">
                         <Link
                             href="/contact"
-                            className="inline-flex items-center gap-2 px-8 py-4 text-white font-semibold rounded-full transition-transform hover:scale-105 shadow-lg shadow-blue-500/20"
-                            style={{ backgroundColor: theme.primaryColor }}
+                            className="inline-flex items-center gap-2 px-8 py-4 text-white font-semibold rounded-full transition-transform hover:scale-105 shadow-lg shadow-blue-500/20 bg-primary"
                         >
                             Get in Touch
                             <svg
