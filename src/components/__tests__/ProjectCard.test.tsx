@@ -1,3 +1,4 @@
+/* eslint-disable react/display-name */
 import { render, screen } from '@testing-library/react';
 import { ProjectCard } from '../ProjectCard';
 import { Project } from '@/types/personality';
@@ -13,8 +14,14 @@ const mockUsePersonality = usePersonality as jest.Mock;
 // Mock framer-motion
 jest.mock('framer-motion', () => ({
     motion: {
-        article: ({ children, className }: any) => <article className={className}>{children}</article>,
-        div: ({ children, className }: any) => <div className={className}>{children}</div>,
+        article: Object.assign(
+            ({ children, className }: { children: React.ReactNode; className?: string }) => <article className={className}>{children}</article>,
+            { displayName: 'motion.article' }
+        ),
+        div: Object.assign(
+            ({ children, className }: { children: React.ReactNode; className?: string }) => <div className={className}>{children}</div>,
+            { displayName: 'motion.div' }
+        ),
     },
 }));
 

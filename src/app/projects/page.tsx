@@ -57,7 +57,7 @@ export default function ProjectsPage() {
                             No projects found
                         </h3>
                         <p className="text-neutral-500 max-w-md mx-auto mb-8">
-                            We couldn't find any projects matching your criteria. Try adjusting your filters or reach out to discuss a new collaboration.
+                            We couldn&apos;t find any projects matching your criteria. Try adjusting your filters or reach out to discuss a new collaboration.
                         </p>
                         <a
                             href="/contact"

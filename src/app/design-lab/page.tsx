@@ -94,7 +94,7 @@ export default function DesignLab() {
                             {isExecutive ? 'The Approach' : 'Technical Process'}
                         </h2>
                         <p className="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed mb-8">
-                            Established a "Design Lab" to iterate on three core philosophies. Each concept was programmed as a scalable vector system to ensure perfect rendering across all viewports.
+                            Established a &quot;Design Lab&quot; to iterate on three core philosophies. Each concept was programmed as a scalable vector system to ensure perfect rendering across all viewports.
                         </p>
 
                         <div className="grid gap-12">
@@ -199,7 +199,7 @@ export default function DesignLab() {
                             {isExecutive ? 'The Impact' : 'Results & Outcomes'}
                         </h2>
                         <p className="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed mb-6">
-                            Selected "Absolute Clarity" (Swiss Style) as the primary identity for its timeless confidence and unpretentious delivery, perfectly aligning with the "Steve Jobs" aesthetic. It fits seamlessly into the current header and footer without competing with the content.
+                            Selected &quot;Absolute Clarity&quot; (Swiss Style) as the primary identity for its timeless confidence and unpretentious delivery, perfectly aligning with the &quot;Steve Jobs&quot; aesthetic. It fits seamlessly into the current header and footer without competing with the content.
                         </p>
 
                         <div className="p-6 bg-neutral-100 dark:bg-neutral-900 rounded-xl border border-neutral-200 dark:border-neutral-800">

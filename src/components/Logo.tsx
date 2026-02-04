@@ -1,6 +1,6 @@
 'use client';
 
-import { usePersonality } from '@/hooks/usePersonality';
+
 
 interface LogoProps {
     className?: string;
@@ -8,7 +8,7 @@ interface LogoProps {
 }
 
 export const Logo = ({ className = '', showName = false }: LogoProps) => {
-    const { theme } = usePersonality();
+
 
     return (
         <div className={`flex items-center gap-3 ${className}`}>

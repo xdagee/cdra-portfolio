@@ -111,7 +111,7 @@ export const Hero = () => {
                                             <div className="w-3 h-3 rounded-full bg-green-500" />
                                         </div>
                                         <div className="space-y-2 font-mono text-sm">
-                                            <div className="text-neutral-400">// Do it now.</div>
+                                            <div className="text-neutral-400">{'// Do it now.'}</div>
                                             <div className="text-neutral-600 dark:text-neutral-300">
                                                 <span className="text-primary">const</span> approach = {'{'}</div>
                                             <div className="pl-4 text-neutral-600 dark:text-neutral-300">

@@ -53,7 +53,7 @@ const socialLinks = [
 ];
 
 export const Footer = () => {
-    const { theme } = usePersonality();
+    const { } = usePersonality();
     const currentYear = new Date().getFullYear();
 
     return (
