@@ -66,7 +66,7 @@ export default function RootLayout({
               name: "Prince Boateng Asare",
               jobTitle: "AI UI/UX Specialist",
               description: "Creative Directing Reformer specializing in systematic problem-solving and clean architecture.",
-              url: "https://princeba.me",
+              url: "https://xdagee.github.io/",
               sameAs: [
                 "https://github.com/xdagee",
                 "https://linkedin.com/in/princeboatengasare",

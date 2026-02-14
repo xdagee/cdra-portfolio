@@ -106,7 +106,7 @@ export const executeCommand = (cmd: string, state: CockpitState): { response: Co
         }
 
         case 'whoami':
-            return { response: { type: 'success', output: 'guest@princeba.me' } };
+            return { response: { type: 'success', output: 'guest@xdagee.github.io' } };
 
         case 'theme':
             return {

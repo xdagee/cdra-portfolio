@@ -51,7 +51,7 @@ export const Terminal = () => {
                                 <div className="w-3 h-3 rounded-full bg-green-500" />
                             </div>
                             <div className="text-xs font-mono text-neutral-500">
-                                {isExecutive ? 'Security Terminal' : 'guest@princeba.me:~'}
+                                {isExecutive ? 'Security Terminal' : 'guest@xdagee.github.io:~'}
                             </div>
                             <div className="w-10" /> {/* Spacer */}
                         </div>
