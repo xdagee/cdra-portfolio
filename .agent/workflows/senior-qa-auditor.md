@@ -10,7 +10,7 @@ description: Performs a comprehensive Senior QA audit and determines production 
 
 ## Step 2: Code Quality Evaluation
 
-// turbo
+// turbo: run_command "npm run lint" OR "composer check-style"
 
 - Review code structure, readability, consistency, and adherence to standards.
 - Identify code smells, anti-patterns, and technical debt.
@@ -28,7 +28,7 @@ description: Performs a comprehensive Senior QA audit and determines production 
 
 ## Step 4: Testing Coverage Assessment
 
-// turbo
+// turbo: run_command "npm test -- --coverage" OR "composer test-coverage"
 
 - Review unit, integration, and end-to-end test coverage.
 - Identify gaps, flaky tests, or missing critical-path validation.

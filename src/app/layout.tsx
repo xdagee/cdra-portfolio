@@ -3,6 +3,9 @@ import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { ThemeSync } from "@/components/ThemeSync";
+import { CockpitProvider } from "@/components/Cockpit/CockpitProvider";
+import { Terminal } from "@/components/Cockpit/Terminal";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -52,7 +55,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"
@@ -73,11 +76,17 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased bg-white dark:bg-neutral-950 text-neutral-900 dark:text-white`}
+        className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased bg-white dark:bg-neutral-950 text-neutral-900 dark:text-white transition-colors duration-300`}
       >
-        <Header />
-        <main id="main-content">{children}</main>
-        <Footer />
+        <ThemeSync />
+        <CockpitProvider>
+          <Header />
+          <main id="main-content" className="min-h-screen">
+            {children}
+          </main>
+          <Footer />
+          <Terminal />
+        </CockpitProvider>
       </body>
     </html>
   );

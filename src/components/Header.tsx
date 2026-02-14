@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { PersonalityToggle } from './PersonalityToggle';
 import { usePersonality } from '@/hooks/usePersonality';
 import { Logo } from './Logo';
+import { socialLinks } from '@/config/socials';
 
 const navItems = [
     { href: '/', label: 'Home' },
@@ -55,6 +56,22 @@ export const Header = () => {
                     </nav>
 
                     <div className="flex items-center gap-4">
+                        {/* Social Links (Desktop) */}
+                        <div className="hidden md:flex items-center gap-2 mr-2">
+                            {socialLinks.slice(0, 2).map((link) => ( // Show first 2 (GitHub/LinkedIn)
+                                <a
+                                    key={link.name}
+                                    href={link.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white transition-colors p-2"
+                                    aria-label={link.name}
+                                >
+                                    {link.icon}
+                                </a>
+                            ))}
+                        </div>
+
                         {/* Personality Toggle */}
                         <PersonalityToggle />
 
@@ -102,6 +119,20 @@ export const Header = () => {
                                     </Link>
                                 </motion.div>
                             ))}
+                            <motion.div
+                                initial={{ opacity: 0, x: -20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ delay: navItems.length * 0.1 }}
+                            >
+                                <a
+                                    href="/resume.pdf"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="block text-lg font-medium text-neutral-600 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white py-3 px-4 -mx-4 rounded-lg hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors"
+                                >
+                                    Resume
+                                </a>
+                            </motion.div>
                         </nav>
                     </motion.div>
                 )}

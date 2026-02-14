@@ -9,9 +9,10 @@ import { usePersonality } from '@/hooks/usePersonality';
 
 interface ProjectDetailProps {
     slug: string;
+    highlightedCodeHtml?: string;
 }
 
-export const ProjectDetail = ({ slug }: ProjectDetailProps) => {
+export const ProjectDetail = ({ slug, highlightedCodeHtml }: ProjectDetailProps) => {
     const project = getProjectBySlug(slug);
     const { theme, mode, isExecutive } = usePersonality();
 
@@ -165,11 +166,17 @@ export const ProjectDetail = ({ slug }: ProjectDetailProps) => {
                                     <div className="w-3 h-3 rounded-full bg-yellow-500" />
                                     <div className="w-3 h-3 rounded-full bg-green-500" />
                                 </div>
-                                <pre className="p-6 overflow-x-auto">
-                                    <code className="text-sm text-green-400 font-mono">
-                                        {project.highlightSnippet}
-                                    </code>
-                                </pre>
+                                <div className="p-6 overflow-x-auto text-sm font-mono">
+                                    {highlightedCodeHtml ? (
+                                        <div dangerouslySetInnerHTML={{ __html: highlightedCodeHtml }} />
+                                    ) : (
+                                        <pre>
+                                            <code className="text-sm text-green-400 font-mono">
+                                                {project.highlightSnippet}
+                                            </code>
+                                        </pre>
+                                    )}
+                                </div>
                             </div>
                         </section>
                     )}

@@ -38,6 +38,8 @@ export function generateStaticParams() {
     }));
 }
 
+import { codeToHtml } from 'shiki';
+
 export default async function ProjectPage({ params }: ProjectPageProps) {
     const { slug } = await params;
     const project = getProjectBySlug(slug);
@@ -46,5 +48,13 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         notFound();
     }
 
-    return <ProjectDetail slug={slug} />;
+    let highlightedCodeHtml = undefined;
+    if (project.highlightSnippet) {
+        highlightedCodeHtml = await codeToHtml(project.highlightSnippet, {
+            lang: 'typescript', // default to TS, or add lang to project type
+            theme: 'github-dark',
+        });
+    }
+
+    return <ProjectDetail slug={slug} highlightedCodeHtml={highlightedCodeHtml} />;
 }
